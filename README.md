@@ -38,7 +38,7 @@ Stitches everything together: loads raw inputs (article + post), runs preprocess
   - TF–IDF representations
   - Cosine similarity measures between article and post fields
 
-### 3. Running the notebooks
+### 2. Running the notebooks
 1. Open **News Dataset Preparation.ipynb**, run all cells to produce the processed dataset, the dataset has been provided in this repository as well.
 2. Open **Training LighGBM.ipynb**, run all cells to train the model.
 3. Open **Complete Pipeline.ipynb**, update paths to your model file and vectorizer and run to get predictions/scores for new (article, post) pairs.
