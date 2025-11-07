@@ -5,7 +5,7 @@ End-to-end workflow to **prepare a news dataset**, **train a LightGBM model**, a
 ## Repository structure
 
 ```
-.
+
 1) News Dataset Preparation.ipynb
 2) Training LighGBM.ipynb
 3) Complete Pipeline.ipynb
@@ -20,43 +20,21 @@ README.md
 ### 1) News Dataset Preparation.ipynb
 An executable notebook for building/cleaning the dataset and deriving text features ready for modeling.
 
-**Outline (parsed from notebook headings):**
-- (Headings not detected)
-
 ### 2) Training LighGBM.ipynb
 Trains a LightGBM classifier on engineered features (e.g., TF–IDF vectors and cosine similarities) and evaluates performance.
-
-**Outline (parsed from notebook headings):**
-- (Headings not detected)
 
 ### 3) Complete Pipeline.ipynb
 Stitches everything together: loads raw inputs (article + post), runs preprocessing/feature extraction, predicts with the trained model, and returns a final score/label.
 
-**Outline (parsed from notebook headings):**
-- (Headings not detected)
-
 ## Getting started
 
-### 1. Environment
-- Python ≥ 3.9 is recommended.
-- Install dependencies:
 
-```bash
-pip install contractions google http joblib kaggle_secrets language_tool_python lightgbm numpy pandas preprocessor pydantic requests scikit-learn scipy spacy sqlite3 torch tqdm transformers tweepy
-```
-
-> If you plan to use spaCy or Stanza pipelines, download language models as needed, for example:
->
-> ```bash
-> python -m spacy download en_core_web_sm
-> ```
-
-### 2. Data
-- Place your news/post data where the notebooks expect it (see the *Dataset Preparation* notebook cells for exact paths/filenames).
+### 1. Data
+- Place the news/post data where the notebooks expect it (see the *Dataset Preparation* notebook cells for exact paths/filenames).
 - Typical inputs:
   - **Context article**: title + full text
   - **Social post**: title/caption + body/text
-- Typical features:
+- Extracted features:
   - TF–IDF representations
   - Cosine similarity measures between article and post fields
 
